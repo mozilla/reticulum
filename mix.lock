@@ -72,7 +72,7 @@
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm", "451d8527787df716d99dc36162fca05934915db0b6141bbdac2ea8d3c7afc7d7"},
   "recon": {:hex, :recon, "2.5.0", "2f7fcbec2c35034bade2f9717f77059dc54eb4e929a3049ca7ba6775c0bd66cd", [:mix, :rebar3], [], "hexpm", "72f3840fedd94f06315c523f6cecf5b4827233bed7ae3fe135b2a0ebeab5e196"},
   "retry": {:hex, :retry, "0.14.0", "751c0f6db0b5127acf346ea6f6c363ec4588320db785c62aa51776b4d280bf07", [:mix], [], "hexpm", "5c158bccf5e4de2a13d044b9930ceb7e7499c29e3fccd7c96f131a6b83a1cff3"},
-  "reverse_proxy_plug": {:git, "https://github.com/mozillareality/reverse_proxy_plug.git", "271111467623ca1f45c3837b14c4ca0661db0f3e", [branch: "reticulum/master"]},
+  "reverse_proxy_plug": {:git, "https://github.com/johnshaughnessy/reverse_proxy_plug.git", "b738b41cca93f0faa1c1fcb55fc585476cc7bf66", [branch: "reticulum/phoenix-1.5-update"]},
   "scrivener": {:hex, :scrivener, "2.7.0", "fa94cdea21fad0649921d8066b1833d18d296217bfdf4a5389a2f45ee857b773", [:mix], [], "hexpm", "30da36a427f2519cf75993271fb7c5aad1759682a70f90d880a85c3d743d2c57"},
   "scrivener_ecto": {:hex, :scrivener_ecto, "2.3.0", "057f9dd3c77315f0a470263c3565353860d0294404aed611b3524c6df9044189", [:mix], [{:ecto, "~> 3.3", [hex: :ecto, repo: "hexpm", optional: false]}, {:scrivener, "~> 2.4", [hex: :scrivener, repo: "hexpm", optional: false]}], "hexpm", "dfa43ca660651da63239e5d4acbfd9c57c5759bbf3a2bdc16cd70777c9bc7e0d"},
   "secure_random": {:hex, :secure_random, "0.5.1", "c5532b37c89d175c328f5196a0c2a5680b15ebce3e654da37129a9fe40ebf51b", [:mix], [], "hexpm", "1b9754f15e3940a143baafd19da12293f100044df69ea12db5d72878312ae6ab"},

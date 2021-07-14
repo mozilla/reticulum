@@ -29,7 +29,7 @@ config :ret, RetWeb.Endpoint,
   assets_url: [scheme: "https", host: "", port: 443],
   link_url: [scheme: "https", host: "", port: 443],
   imgproxy_url: [scheme: "http", host: "", port: 5000],
-  pubsub: [name: Ret.PubSub, adapter: Phoenix.PubSub.PG2, pool_size: 4],
+  pubsub_server: Ret.PubSub,
   server: true,
   root: "."
 

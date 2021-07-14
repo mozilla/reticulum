@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="container">
-          <%= render @view_module, @view_template, assigns %>
+          <%= @inner_content %>
         </div>
       </div>
       <div class="container">

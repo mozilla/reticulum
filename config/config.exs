@@ -31,7 +31,7 @@ config :ret, RetWeb.Endpoint,
   # This config value is for local development only.
   secret_key_base: "txlMOtlaY5x3crvOCko4uV5PM29ul3zGo1oBGNO3cDXx+7GHLKqt0gR9qzgThxb5",
   render_errors: [view: RetWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Ret.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub_server: Ret.PubSub
 
 # Configures Elixir's Logger
 config :logger, :console,

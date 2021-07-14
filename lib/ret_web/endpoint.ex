@@ -3,7 +3,7 @@ defmodule RetWeb.Endpoint do
   use Sentry.Phoenix.Endpoint
   use Absinthe.Phoenix.Endpoint
 
-  socket("/socket", RetWeb.SessionSocket, websocket: [check_origin: {RetWeb.Endpoint, :allowed_origin?, []}])
+  socket("/socket", RetWeb.SessionSocket, websocket: [log: false, check_origin: {RetWeb.Endpoint, :allowed_origin?, []}])
 
   def get_cors_origins, do: Application.get_env(:ret, RetWeb.Endpoint)[:allowed_origins] |> String.split(",")
   def get_cors_origin_urls, do: get_cors_origins() |> Enum.filter(&(&1 != "*")) |> Enum.map(&URI.parse/1)
@@ -25,7 +25,7 @@ defmodule RetWeb.Endpoint do
   end
 
   plug(Plug.RequestId)
-  plug(Plug.Logger)
+  # plug(Plug.Logger)
 
   plug(Plug.MethodOverride)
 

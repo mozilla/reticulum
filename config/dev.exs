@@ -75,6 +75,9 @@ config :logger, :console, format: "[$level] $message\n"
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
 
+# Disable phoenix logging
+config :phoenix, :logger, false
+
 env_db_host = "#{System.get_env("DB_HOST")}"
 
 # Configure your database
@@ -84,7 +87,8 @@ config :ret, Ret.Repo,
   database: "ret_dev",
   hostname: if(env_db_host == "", do: "localhost", else: env_db_host),
   template: "template0",
-  pool_size: 10
+  pool_size: 10,
+  log: false
 
 config :ret, Ret.SessionLockRepo,
   username: "postgres",

@@ -36,6 +36,20 @@ defmodule Ret.OAuthToken do
 
     token
   end
+
+  def token_for_oidc_request(topic_key, session_id) do
+    {:ok, token, _claims} =
+      Ret.OAuthToken.encode_and_sign(
+        # OAuthTokens do not have a resource associated with them
+        nil,
+        %{topic_key: topic_key, session_id: session_id, aud: :ret_oidc},
+        allowed_algos: ["HS512"],
+        ttl: {10, :minutes},
+        allowed_drift: 60 * 1000
+      )
+
+    token
+  end
 end
 
 defmodule Ret.OAuthTokenSecretFetcher do

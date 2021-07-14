@@ -19,10 +19,21 @@ defmodule RetWeb.Api.V1.ProjectAssetsController do
     account = Guardian.Plug.current_resource(conn)
 
     with %Project{} = project <- Project.project_by_sid_for_account(project_sid, account),
-         %Asset{} = asset <- Asset.asset_by_sid_for_account(asset_sid, account),
-         {:ok, _} <- Project.add_asset_to_project(project, asset) do
-      asset = Repo.preload(asset, [:asset_owned_file, :thumbnail_owned_file])
-      render(conn, "show.json", asset: asset)
+         %Asset{} = asset <- Asset.asset_by_sid_for_account(asset_sid, account) do
+
+      project_asset = Repo.get_by(ProjectAsset, [project_id: project.project_id, asset_id: asset.asset_id])
+      
+      if is_nil(project_asset) do
+        case Project.add_asset_to_project(project, asset) do
+          {:error, error} -> render_error_json(conn, error)
+          %ProjectAsset{} = project_asset ->
+            asset = Repo.preload(asset, [:asset_owned_file, :thumbnail_owned_file])
+            render(conn, "show.json", asset: asset)
+        end
+      else
+        asset = Repo.preload(asset, [:asset_owned_file, :thumbnail_owned_file])
+        render(conn, "show.json", asset: asset)
+      end
     else
       {:error, error} -> render_error_json(conn, error)
       nil -> render_error_json(conn, :not_found)

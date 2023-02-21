@@ -428,7 +428,7 @@ defmodule RetWeb.PageController do
   end
 
   def render_hub_content(conn, nil, _) do
-    conn |> send_resp(200, "Hub is not configured properly. (Homepage Room ID not valid.) Please contact your Hub administrator.")
+    conn |> send_resp(200, "ERR: Room ID not valid. Please contact your Hub administrator")
   end
 
   def render_hub_content(conn, hub, "objects.gltf") do

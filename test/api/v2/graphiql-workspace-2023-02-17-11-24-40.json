@@ -1,0 +1,137 @@
+{
+  "key": "graphiql",
+  "lastId": 9,
+  "tabIds": [
+    "tab2",
+    "tab3",
+    "tab5",
+    "tab8",
+    "tab9"
+  ],
+  "closedTabs": [],
+  "defaultUrl": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+  "defaultWebsocketUrl": "",
+  "defaultQuery": "",
+  "defaultVariables": "",
+  "defaultProxy": false,
+  "defaultHeaders": [
+    {
+      "name": "authorization",
+      "value": "TOKENUPDATEME"
+    }
+  ],
+  "usedUrls": [],
+  "recentHeaders": [],
+  "maxTabHistory": 20,
+  "maxUrlHistory": 20,
+  "maxHistory": 20,
+  "savedQueries": [],
+  "activeId": "tab9",
+  "tabs": [
+    {
+      "id": "tab2",
+      "name": "queries",
+      "websocketUrl": "",
+      "proxy": false,
+      "collapsed": false,
+      "maxHistory": 20,
+      "url": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+      "headers": [
+        {
+          "name": "authorization",
+          "value": "TOKENUPDATEME"
+        }
+      ],
+      "history": [],
+      "graphiql:query": "query {\n  myRooms(page: 1, pageSize: 3) {\n    entries {\n      name,\n      description,\n      id,\n      memberPermissions{\n        fly\n      },\n      creatorAssignmentToken,\n    defaultEnvironmentGltfBundleUrl,\n    scene {\n      ... on Scene {\n        name,\n        id\n      }\n      ... on SceneListing{\n        name,\n        id\n      }\n    }\n    }\n  }\n  \n  favoriteRooms(page: 1, pageSize: 3) {\n    entries {\n      name,\n      id,\n      memberPermissions{\n        fly\n      }\n          defaultEnvironmentGltfBundleUrl,\n    scene {\n      ... on Scene {\n        name,\n        id\n      }\n      ... on SceneListing{\n        name,\n        id\n      }\n    }\n    }\n  }\n  \n   publicRooms(page: 1, pageSize: 3) {\n    entries {\n      name,\n      id,\n      memberPermissions{\n        fly\n      }\n          defaultEnvironmentGltfBundleUrl,\n    scene {\n      ... on Scene {\n        name,\n        id\n      }\n      ... on SceneListing{\n        name,\n        id\n      }\n    }\n    }\n  }\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"query {\\n  myRooms(page: 2, pageSize: 5) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"query {\\n publicRooms(page: 2, pageSize: 5) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n publicRooms(page: 1, pageSize: 5) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n  myRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n  \\n  favoriteRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n  \\n   publicRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n  myRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      description,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n  \\n  favoriteRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n  \\n   publicRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n  myRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      description,\\n      id,\\n      memberPermissions{\\n        fly\\n      },\\n      scene {\\n        ...on Scene {\\n          name,\\n          id\\n        }\\n      }\\n    }\\n  }\\n  \\n  favoriteRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n  \\n   publicRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n  myRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      description,\\n      id,\\n      memberPermissions{\\n        fly\\n      },\\n    defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n  \\n  favoriteRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n          defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n  \\n   publicRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n          defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n}\"},{\"query\":\"query {\\n  myRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      description,\\n      id,\\n      memberPermissions{\\n        fly\\n      },\\n      creatorAssignmentToken,\\n    defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n  \\n  favoriteRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n          defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n  \\n   publicRooms(page: 1, pageSize: 3) {\\n    entries {\\n      name,\\n      id,\\n      memberPermissions{\\n        fly\\n      }\\n          defaultEnvironmentGltfBundleUrl,\\n    scene {\\n      ... on Scene {\\n        name,\\n        id\\n      }\\n      ... on SceneListing{\\n        name,\\n        id\\n      }\\n    }\\n    }\\n  }\\n}\"}]}",
+      "graphiql:docExplorerWidth": 350,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:editorFlex": 1
+    },
+    {
+      "id": "tab3",
+      "name": "createRoom",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [
+        {
+          "name": "authorization",
+          "value": "TOKENUPDATEME"
+        }
+      ],
+      "url": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [],
+      "graphiql:query": "mutation {\n  createRoom(description: \"A room with a view\", allowPromotion:false) {\n    id,\n    name,\n    allowPromotion,\n    memberPermissions{\n      fly\n    },\n    embedToken,\n    creatorAssignmentToken,\n    roomSize\n  }\n}",
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\") {\\n    id\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\") {\\n    id,\\n    name\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\") {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    }\\n  }\\n}\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\") {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\", allowPromotion:false) {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\", allowPromotion:false) {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken,\\n    creatorAssignmentToken\\n  }\\n}\"},{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\", allowPromotion:false) {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken,\\n    creatorAssignmentToken,\\n    roomSize\\n  }\\n}\"}]}",
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:editorFlex": 1,
+      "graphiql:docExplorerWidth": 350
+    },
+    {
+      "id": "tab5",
+      "name": "updateRoom",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [
+        {
+          "name": "authorization",
+          "value": "TOKENUPDATEME"
+        }
+      ],
+      "url": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [],
+      "graphiql:query": "mutation {\n  updateRoom(id: \"7VkWtfB\", description: \"A room with an APP view\") {\n    description,\n    id,\n    name,\n    allowPromotion,\n    memberPermissions{\n      fly\n    },\n    embedToken\n  }\n}",
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:editorFlex": 1,
+      "graphiql:queries": "{\"queries\":[{\"query\":\"mutation {\\n  createRoom(description: \\\"A room with a view\\\") {\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"EzqydXp\\\", description: \\\"Aasddas view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"maJCnRD\\\", description: \\\"Aasddas view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"maJCnRD\\\", description: \\\"fffff view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"maJCnRD\\\", description: \\\"fggggg view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\",\"variables\":\"\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"maJCnRD\\\", description: \\\"A room with an APP view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\"},{\"query\":\"mutation {\\n  updateRoom(id: \\\"7VkWtfB\\\", description: \\\"A room with an APP view\\\") {\\n    description,\\n    id,\\n    name,\\n    allowPromotion,\\n    memberPermissions{\\n      fly\\n    },\\n    embedToken\\n  }\\n}\"}]}",
+      "graphiql:docExplorerWidth": 350
+    },
+    {
+      "id": "tab8",
+      "name": "introspection more",
+      "url": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [
+        {
+          "name": "authorization",
+          "value": "TOKENUPDATEME"
+        }
+      ],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [],
+      "graphiql:query": "query {\n  __schema {\n    types {\n      name\n      kind\n      fields {\n        name\n        description\n        type {\n          name\n        }\n      }\n    }\n  }\n}",
+      "graphiql:variables": "",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:docExplorerWidth": 350
+    },
+    {
+      "id": "tab9",
+      "name": "introspection less",
+      "url": "https://HOSTUPDATEME/api/v2_alpha/graphiql",
+      "websocketUrl": "",
+      "proxy": false,
+      "headers": [
+        {
+          "name": "authorization",
+          "value": "TOKENUPDATEME"
+        }
+      ],
+      "collapsed": false,
+      "maxHistory": 20,
+      "history": [],
+      "graphiql:query": "query {\n  __schema {\n    types {\n      name\n      description\n    } \n  }\n}",
+      "graphiql:variables": "",
+      "graphiql:editorFlex": 1,
+      "graphiql:variableEditorHeight": 200,
+      "graphiql:docExplorerWidth": 350
+    }
+  ]
+}

@@ -459,7 +459,7 @@ defmodule RetWeb.PageController do
 
     hub_meta_tags =
       Phoenix.View.render_to_string(RetWeb.PageView, "hub-meta.html",
-        hub: hub,
+        hub: hub |> maybe_scrub_room_data(),
         scene: hub.scene,
         ret_meta: Ret.Meta.get_meta(include_repo: false),
         available_integrations_script: {:safe, available_integrations_script |> with_script_tags},
@@ -802,4 +802,19 @@ defmodule RetWeb.PageController do
   defp with_script_tags(script), do: "<script>#{script}</script>"
 
   defp module_config(key), do: Application.get_env(:ret, __MODULE__)[key]
+
+  defp maybe_scrub_room_data(hub) do
+    if hub.entry_mode == :deny do
+      Map.merge(hub, %{
+        name: "Closed Room",
+        description: "This room is closed.",
+        slug: "",
+        scene: nil,
+        scene_listing: nil,
+        user_data: nil
+      })
+    else
+      hub
+    end
+  end
 end

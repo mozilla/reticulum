@@ -122,7 +122,7 @@ defmodule Ret.DiscordClient do
     (1 <<< 11) => :send_messages,
     (1 <<< 12) => :send_tts_messages,
     (1 <<< 13) => :manage_messages,
-    (1 <<< 14) => :emded_links,
+    (1 <<< 14) => :embed_links,
     (1 <<< 15) => :attach_files,
     (1 <<< 16) => :read_message_history,
     (1 <<< 17) => :mention_everyone,

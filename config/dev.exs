@@ -79,14 +79,16 @@ config :ret, Ret.Repo,
   password: "postgres",
   database: "ret_dev",
   template: "template0",
-  pool_size: 10
+  pool_size: 10,
+  log: false
 
 config :ret, Ret.SessionLockRepo,
   username: "postgres",
   password: "postgres",
   database: "ret_dev",
   template: "template0",
-  pool_size: 10
+  pool_size: 10,
+  log: false
 
 config :ret, RetWeb.Plugs.HeaderAuthorization,
   header_name: "x-ret-admin-access-key",

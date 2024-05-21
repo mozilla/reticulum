@@ -86,8 +86,8 @@ defmodule RetWeb.Router do
   end
 
   pipeline :graphql do
-    plug RetWeb.ApiTokenAuthPipeline
-    plug RetWeb.AddAbsintheContext
+    plug(RetWeb.ApiTokenAuthPipeline)
+    plug(RetWeb.AddAbsintheContext)
   end
 
   scope "/health", RetWeb do
@@ -198,8 +198,8 @@ defmodule RetWeb.Router do
     pipe_through [:parsed_body, :api, :public_api_access, :graphql] ++
                    if(secure?, do: [:ssl_only], else: [])
 
-    forward "/graphiql", Absinthe.Plug.GraphiQL, json_codec: Jason, schema: RetWeb.Schema
-    forward "/", Absinthe.Plug, json_codec: Jason, schema: RetWeb.Schema
+    forward("/graphiql", Absinthe.Plug.GraphiQL, json_codec: Jason, schema: RetWeb.Schema)
+    forward("/", Absinthe.Plug, json_codec: Jason, schema: RetWeb.Schema)
   end
 
   scope "/api-internal", RetWeb do
@@ -213,6 +213,7 @@ defmodule RetWeb.Router do
       post "/rewrite_assets", ApiInternal.V1.RewriteAssetsController, :post
       put "/change_email_for_login", ApiInternal.V1.LoginEmailController, :update
       post "/make_auth_token_for_email", ApiInternal.V1.AuthTokenController, :post
+      get("/hub_stats", ApiInternal.V1.HubStatsController, :show)
     end
   end
 

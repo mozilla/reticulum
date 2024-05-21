@@ -24,6 +24,7 @@ defmodule Ret.NodeStat do
     ])
   end
 
+  @spec max_ccu_for_time_range(DateTime.t(), DateTime.t()) :: number()
   def max_ccu_for_time_range(start_time, end_time) do
     start_time_truncated = start_time |> NaiveDateTime.truncate(:second)
     end_time_truncated = end_time |> NaiveDateTime.truncate(:second)
@@ -35,6 +36,8 @@ defmodule Ret.NodeStat do
           where: stat.measured_at >= ^start_time_truncated,
           where: stat.measured_at < ^end_time_truncated
       )
+
+    # Can I check that the db actually has the time range? So we could technically fill in previous data.
 
     if max_ccu === nil, do: 0, else: max_ccu
   end

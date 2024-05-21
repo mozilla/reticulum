@@ -46,6 +46,7 @@ Run the following commands at the root of the reticulum directory:
    - If step 2 fails, you may need to change the password for the `postgres` role to match the password configured `dev.exs`.
    - From within the `psql` shell, enter `ALTER USER postgres WITH PASSWORD 'postgres';`
    - If you receive an error that the `ret_dev` database does not exist, (using psql again) enter `create database ret_dev;`
+   - If you receive an error that says `ERROR 42501 (insufficient_privilege) permission denied to create role`, (using psql) enter `alter user postgres createrole;`
 3. From the project directory `mkdir -p storage/dev`
 
 ### 3. Start Reticulum

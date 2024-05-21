@@ -297,7 +297,15 @@ defmodule RetWeb.HubChannel do
     account = Guardian.Phoenix.Socket.current_resource(socket)
     hub = socket |> hub_for_socket
 
-    if (type != "photo" and type != "video") or account |> can?(spawn_camera(hub)) do
+    authorized =
+      cond do
+        type in ["photo", "video"] -> account |> can?(spawn_camera(hub))
+        type === "chat" -> account |> can?(text_chat(hub))
+        type === "permission" -> account |> can?(update_hub(hub))
+        true -> true
+      end
+
+    if authorized do
       broadcast!(
         socket,
         event,
